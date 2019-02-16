@@ -1,8 +1,6 @@
 #include <iostream>
 #include "array_insert.h"
-
-template<class T>
-void print_array(T array[], int array_size);
+#include "utils.h"
 
 int main() {
     int array[] = {1, 2, 3, 4, 5};
@@ -13,13 +11,4 @@ int main() {
     std::cout << "Array after insert: " << std::endl;
     print_array(array, array_size);
     return 0;
-}
-
-// Utility functions
-template<class T>
-void print_array(T array[], int array_size) {
-    for (int i = 0; i < array_size; i++) {
-        std::cout << array[i] << " ";
-    }
-    std::cout << std::endl;
 }

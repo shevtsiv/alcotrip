@@ -8,7 +8,7 @@ int main() {
     int array_size = std::size(array);
     std::cout << "Array before insert: " << std::endl;
     print_array(array, array_size);
-    insert_subarray_into_array(array, array_size, 1, new int[1]{42}, 1);
+    insert_subarray_into_array(array, array_size, 1, new int[2]{42, 89}, 2);
     std::cout << "Array after insert: " << std::endl;
     print_array(array, array_size);
 

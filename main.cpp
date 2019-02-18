@@ -24,7 +24,8 @@ int main() {
 
     // Get second minimum of array
     int smin_array[10] = {5, 3, 0, 10, 16, -6, 0, -6, -10, 3};
-    std::cout << "Second minimum of an array: " << get_second_minimum(smin_array, std::size(smin_array)) << std::endl;
+    int second_minimum_index = get_second_minimum(smin_array, std::size(smin_array));
+    std::cout << "Second minimum of an array(Should be 5): " << second_minimum_index << std::endl;
 
     // Get first non repeat element of an array
     int first_non_repeat_array[10] = {1, 9, 4, 5, 2, 2, 9, 1, 43, 10};

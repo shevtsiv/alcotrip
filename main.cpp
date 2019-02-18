@@ -3,6 +3,7 @@
 #include "utils.h"
 #include "merge_sorted_arrays.h"
 #include "second_min_array.h"
+#include "first_non_repeat_elem.h"
 
 int main() {
     int array[] = {1, 2, 3, 4, 5};
@@ -24,5 +25,13 @@ int main() {
     // Get second minimum of array
     int smin_array[10] = {5, 3, 0, 10, 16, -6, 0, -6, -10, 3};
     std::cout << "Second minimum of an array: " << get_second_minimum(smin_array, std::size(smin_array)) << std::endl;
+
+    // Get first non repeat element of an array
+    int first_non_repeat_array[10] = {1, 9, 4, 5, 2, 2, 9, 1, 43, 10};
+    int first_non_repeat_element = first_non_repeat(first_non_repeat_array, std::size(smin_array));
+    std::cout << "First non repeat element of an array(Should be 2): " << first_non_repeat_element << std::endl;
+    int all_elem_repeat_array[8] = {0, 1, 2, 3, 0, 1, 2, 3};
+    int should_be_negative = first_non_repeat(all_elem_repeat_array, std::size(all_elem_repeat_array));
+    std::cout << "First non repeat element of an array(Should be -999): " << should_be_negative << std::endl;
     return 0;
 }

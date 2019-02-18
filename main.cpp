@@ -2,6 +2,7 @@
 #include "array_insert.h"
 #include "utils.h"
 #include "merge_sorted_arrays.h"
+#include "second_min_array.h"
 
 int main() {
     int array[] = {1, 2, 3, 4, 5};
@@ -19,5 +20,9 @@ int main() {
     std::cout << "Merged array: " << std::endl;
     print_array(merged, std::size(first) + std::size(second));
     delete[] merged;
+
+    // Get second minimum of array
+    int smin_array[10] = {5, 3, 0, 10, 16, -6, 0, -6, -10, 3};
+    std::cout << "Second minimum of an array: " << get_second_minimum(smin_array, std::size(smin_array)) << std::endl;
     return 0;
 }

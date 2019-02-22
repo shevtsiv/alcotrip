@@ -1,3 +1,10 @@
+/*
+ * This file is not executable despite of main() function.
+ * You should run tests.cpp instead.
+ * To make this file executable you have to change CMakeLists.txt in the following way:
+ * add_executable(alcotrip main.cpp)
+ */
+
 #include <iostream>
 #include "array_insert.h"
 #include "utils.h"

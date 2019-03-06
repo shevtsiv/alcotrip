@@ -6,6 +6,7 @@
 #include "merge_sorted_arrays.h"
 #include "second_min_array.h"
 #include "first_non_repeat_elem.h"
+#include "euclidean.h"
 
 using namespace testing;
 
@@ -42,6 +43,17 @@ TEST(GetFirstNonRepeatElementOfArray, AllElementsRepeat) {
     int array[8] = {0, 1, 2, 3, 0, 1, 2, 3};
     int should_be_negative = first_non_repeat(array, std::size(array));
     ASSERT_EQ(should_be_negative, -999);
+}
+
+TEST(EuclideanAlgorithm, GetGreatestCommonDivisor) {
+    int a = 24;
+    int b = 16;
+    ASSERT_EQ(get_greatest_common_divisor(a, b), 8);
+    a = 56;
+    b = 0;
+    ASSERT_EQ(get_greatest_common_divisor(a, b), 56);
+    a = 0;
+    ASSERT_EQ(get_greatest_common_divisor(a, b), 0);
 }
 
 int main(int argc, char **argv) {

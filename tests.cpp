@@ -7,6 +7,7 @@
 #include "second_min_array.h"
 #include "first_non_repeat_elem.h"
 #include "euclidean.h"
+#include "numerical_root.h"
 
 using namespace testing;
 
@@ -54,6 +55,19 @@ TEST(EuclideanAlgorithm, GetGreatestCommonDivisor) {
     ASSERT_EQ(get_greatest_common_divisor(a, b), 56);
     a = 0;
     ASSERT_EQ(get_greatest_common_divisor(a, b), 0);
+}
+
+TEST(NumericalRoot, NumericalRootTest) {
+    unsigned long long number = 123456;
+    ASSERT_EQ(get_numerical_root(number), 3);
+    number = 123456789123456789;
+    ASSERT_EQ(get_numerical_root(number), 9);
+    number = 0;
+    ASSERT_EQ(get_numerical_root(number), 0);
+    number = 999999999999999999;
+    ASSERT_EQ(get_numerical_root(number), 9);
+    number = 9223372036854775807;
+    ASSERT_EQ(get_numerical_root(number), 7);
 }
 
 int main(int argc, char **argv) {
